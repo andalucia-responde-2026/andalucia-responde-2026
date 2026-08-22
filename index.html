@@ -4,290 +4,287 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Andalucía Responde 2026</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="container">
-        <!-- Header -->
-        <header class="header">
-            <div class="header-content">
-                <div>
-                    <h1>🚨 Andalucía Responde</h1>
-                    <p class="subtitle">Reporte Consolidado de Desastres - 2026</p>
+    <div class="dashboard">
+        <!-- SIDEBAR -->
+        <aside class="sidebar">
+            <div class="sidebar-header">
+                <h2>📊 Andalucía Responde</h2>
+                <p>2026</p>
+            </div>
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a href="#poblacion"><i class="fas fa-users"></i> Población</a></li>
+                    <li><a href="#viviendas"><i class="fas fa-home"></i> Viviendas</a></li>
+                    <li><a href="#infraestructura"><i class="fas fa-building"></i> Infraestructura</a></li>
+                    <li><a href="#servicios"><i class="fas fa-heartbeat"></i> Servicios</a></li>
+                    <li><a href="#requerimientos"><i class="fas fa-list-check"></i> Requerimientos</a></li>
+                </ul>
+            </nav>
+            <div class="sidebar-footer">
+                <p><strong>Corte:</strong> <span id="corte-footer">--</span></p>
+                <p><strong>Decreto:</strong> <span id="decreto-footer">--</span></p>
+            </div>
+        </aside>
+
+        <!-- MAIN CONTENT -->
+        <main class="main-content">
+            <!-- HEADER -->
+            <header class="header">
+                <div class="header-left">
+                    <h1>🚨 Andalucía Responde 2026</h1>
+                    <p>Reporte Consolidado de Desastres</p>
                 </div>
-                <div class="header-info">
-                    <div class="info-item">
+                <div class="header-right">
+                    <div class="header-stat">
                         <span class="label">Corte:</span>
                         <span class="value" id="corte">--</span>
                     </div>
-                    <div class="info-item">
-                        <span class="label">Decreto:</span>
+                    <div class="header-stat">
+                        <span class="label">Declaratoria:</span>
                         <span class="value" id="declaratoria">--</span>
                     </div>
                 </div>
+            </header>
+
+            <!-- CONTENT -->
+            <div class="content">
+                <!-- Section: Población -->
+                <section id="poblacion" class="section">
+                    <h2><i class="fas fa-users"></i> Población Afectada</h2>
+                    <div class="cards-grid">
+                        <div class="card card-blue">
+                            <div class="card-icon"><i class="fas fa-person"></i></div>
+                            <div class="card-content">
+                                <h3>Población Afectada</h3>
+                                <p class="card-value" id="poblacion-afectada">0</p>
+                                <p class="card-unit">personas</p>
+                            </div>
+                        </div>
+                        <div class="card card-red">
+                            <div class="card-icon"><i class="fas fa-cross"></i></div>
+                            <div class="card-content">
+                                <h3>Fallecidos</h3>
+                                <p class="card-value" id="poblacion-fallecidos">0</p>
+                                <p class="card-unit">personas</p>
+                            </div>
+                        </div>
+                        <div class="card card-orange">
+                            <div class="card-icon"><i class="fas fa-question"></i></div>
+                            <div class="card-content">
+                                <h3>Desaparecidos</h3>
+                                <p class="card-value" id="poblacion-desaparecidos">0</p>
+                                <p class="card-unit">personas</p>
+                            </div>
+                        </div>
+                        <div class="card card-yellow">
+                            <div class="card-icon"><i class="fas fa-band-aid"></i></div>
+                            <div class="card-content">
+                                <h3>Heridos</h3>
+                                <p class="card-value" id="poblacion-heridos">0</p>
+                                <p class="card-unit">personas</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: Viviendas -->
+                <section id="viviendas" class="section">
+                    <h2><i class="fas fa-home"></i> Viviendas Afectadas</h2>
+                    <div class="cards-grid">
+                        <div class="card card-blue">
+                            <div class="card-icon"><i class="fas fa-building"></i></div>
+                            <div class="card-content">
+                                <h3>Urbanas Averiadas</h3>
+                                <p class="card-value" id="viviendas-urbanas-averiadas">0</p>
+                            </div>
+                        </div>
+                        <div class="card card-red">
+                            <div class="card-icon"><i class="fas fa-house-damage"></i></div>
+                            <div class="card-content">
+                                <h3>Urbanas Destruidas</h3>
+                                <p class="card-value" id="viviendas-urbanas-destruidas">0</p>
+                            </div>
+                        </div>
+                        <div class="card card-orange">
+                            <div class="card-icon"><i class="fas fa-tree"></i></div>
+                            <div class="card-content">
+                                <h3>Rurales Averiadas</h3>
+                                <p class="card-value" id="viviendas-rurales-averiadas">0</p>
+                            </div>
+                        </div>
+                        <div class="card card-yellow">
+                            <div class="card-icon"><i class="fas fa-person-hiking"></i></div>
+                            <div class="card-content">
+                                <h3>Rurales Destruidas</h3>
+                                <p class="card-value" id="viviendas-rurales-destruidas">0</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: Infraestructura -->
+                <section id="infraestructura" class="section">
+                    <h2><i class="fas fa-building"></i> Infraestructura</h2>
+                    <div class="info-grid">
+                        <div class="info-box">
+                            <h3><i class="fas fa-hospital"></i> Salud</h3>
+                            <div class="info-list">
+                                <div class="info-row">
+                                    <span>Hospitales:</span>
+                                    <strong id="salud-hospitales">0</strong>
+                                </div>
+                                <div class="info-row">
+                                    <span>Centros de Salud:</span>
+                                    <strong id="salud-centros-salud">0</strong>
+                                </div>
+                                <div class="info-row">
+                                    <span>Puestos de Salud:</span>
+                                    <strong id="salud-puestos-salud">0</strong>
+                                </div>
+                                <div class="info-row">
+                                    <span>Clínicas/IPS:</span>
+                                    <strong id="salud-clinicas-ips">0</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <h3><i class="fas fa-book"></i> Educación</h3>
+                            <div class="info-list">
+                                <div class="info-row">
+                                    <span>Centros Educativos:</span>
+                                    <strong id="educacion-centros-principales">0</strong>
+                                </div>
+                                <div class="info-row">
+                                    <span>Sedes Urbanas:</span>
+                                    <strong id="educacion-sedes-urbanas">0</strong>
+                                </div>
+                                <div class="info-row">
+                                    <span>Sedes Rurales:</span>
+                                    <strong id="educacion-sedes-rurales">0</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <h3><i class="fas fa-gopuram"></i> Edificaciones</h3>
+                            <div class="info-list">
+                                <div class="info-row">
+                                    <span>Comunitarios:</span>
+                                    <strong id="edificaciones-centros-comunitarios">0</strong>
+                                </div>
+                                <div class="info-row">
+                                    <span>Iglesias:</span>
+                                    <strong id="edificaciones-iglesias">0</strong>
+                                </div>
+                                <div class="info-row">
+                                    <span>Plaza de Mercado:</span>
+                                    <strong id="edificaciones-plaza-mercado">0</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <h3><i class="fas fa-road"></i> Vías</h3>
+                            <div class="info-list">
+                                <div class="info-row">
+                                    <span>Principales Urbanas:</span>
+                                    <strong id="vias-principales-urbanas">0</strong>
+                                </div>
+                                <div class="info-row">
+                                    <span>Secundarias Rurales:</span>
+                                    <strong id="vias-secundarias-terciarias-rurales">0</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: Servicios -->
+                <section id="servicios" class="section">
+                    <h2><i class="fas fa-heartbeat"></i> Servicios y Albergues</h2>
+                    <div class="info-grid">
+                        <div class="info-box">
+                            <h3><i class="fas fa-network-wired"></i> Estado de Servicios</h3>
+                            <div class="status-badge" id="servicios">--</div>
+                        </div>
+                        <div class="info-box">
+                            <h3><i class="fas fa-campground"></i> Albergues</h3>
+                            <div class="info-list">
+                                <div class="info-row">
+                                    <span>Ubicación:</span>
+                                    <strong id="albergues-ubicacion">--</strong>
+                                </div>
+                                <div class="info-row">
+                                    <span>Activos:</span>
+                                    <strong id="albergues-activos">0</strong>
+                                </div>
+                                <div class="info-row">
+                                    <span>Personas:</span>
+                                    <strong id="albergues-personas">0</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <h3><i class="fas fa-hand-holding-heart"></i> Asistencia Humanitaria</h3>
+                            <div class="info-list">
+                                <div class="info-row">
+                                    <span>Asistencia:</span>
+                                    <strong id="atencion-asistencia-humanitaria">--</strong>
+                                </div>
+                                <div class="info-row">
+                                    <span>Colchones/Frazadas:</span>
+                                    <strong id="atencion-colchones-frazadas">--</strong>
+                                </div>
+                                <div class="info-row">
+                                    <span>Maquinaria:</span>
+                                    <strong id="atencion-maquinaria-amarilla">0</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <h3><i class="fas fa-store"></i> Comercio</h3>
+                            <div class="info-list">
+                                <div class="info-row">
+                                    <span>Locales Averiados:</span>
+                                    <strong id="locales-averiados">0</strong>
+                                </div>
+                                <div class="info-row">
+                                    <span>Locales Destruidos:</span>
+                                    <strong id="locales-destruidos">0</strong>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: Requerimientos -->
+                <section id="requerimientos" class="section">
+                    <h2><i class="fas fa-list-check"></i> Gestión y Requerimientos</h2>
+                    <div class="info-grid">
+                        <div class="info-box full">
+                            <h3><i class="fas fa-cogs"></i> Estado</h3>
+                            <div class="info-list">
+                                <div class="info-row">
+                                    <span>PMU:</span>
+                                    <span class="status" id="gestion-pmu">--</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-box full">
+                            <h3><i class="fas fa-exclamation-circle"></i> Requerimientos</h3>
+                            <p class="requirements-text" id="requerimientos">--</p>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Footer Info -->
+                <section class="section footer-info">
+                    <p><i class="fas fa-file-excel"></i> <strong>Fuente:</strong> <span id="fuente">--</span></p>
+                </section>
             </div>
-        </header>
-
-        <!-- Main Content -->
-        <main>
-            <!-- Section: Población Afectada -->
-            <section class="section">
-                <h2>Población Afectada</h2>
-                <div class="cards-grid">
-                    <div class="card card-blue">
-                        <h3>Población Afectada</h3>
-                        <p class="card-value" id="poblacion-afectada">0</p>
-                        <p class="card-label">personas</p>
-                    </div>
-                    <div class="card card-red">
-                        <h3>Fallecidos</h3>
-                        <p class="card-value" id="poblacion-fallecidos">0</p>
-                        <p class="card-label">personas</p>
-                    </div>
-                    <div class="card card-orange">
-                        <h3>Desaparecidos</h3>
-                        <p class="card-value" id="poblacion-desaparecidos">0</p>
-                        <p class="card-label">personas</p>
-                    </div>
-                    <div class="card card-yellow">
-                        <h3>Heridos</h3>
-                        <p class="card-value" id="poblacion-heridos">0</p>
-                        <p class="card-label">personas</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section: Viviendas -->
-            <section class="section">
-                <h2>Viviendas Afectadas</h2>
-                <div class="cards-grid">
-                    <div class="card card-blue">
-                        <h3>Urbanas Averiadas</h3>
-                        <p class="card-value" id="viviendas-urbanas-averiadas">0</p>
-                    </div>
-                    <div class="card card-red">
-                        <h3>Urbanas Destruidas</h3>
-                        <p class="card-value" id="viviendas-urbanas-destruidas">0</p>
-                    </div>
-                    <div class="card card-orange">
-                        <h3>Rurales Averiadas</h3>
-                        <p class="card-value" id="viviendas-rurales-averiadas">0</p>
-                    </div>
-                    <div class="card card-yellow">
-                        <h3>Rurales Destruidas</h3>
-                        <p class="card-value" id="viviendas-rurales-destruidas">0</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section: Infraestructura -->
-            <section class="section">
-                <h2>Infraestructura</h2>
-                <div class="cards-grid-2">
-                    <div class="info-card">
-                        <h3>Salud</h3>
-                        <div class="info-list">
-                            <div class="info-row">
-                                <span>Hospitales:</span>
-                                <strong id="salud-hospitales">0</strong>
-                            </div>
-                            <div class="info-row">
-                                <span>Centros de Salud:</span>
-                                <strong id="salud-centros-salud">0</strong>
-                            </div>
-                            <div class="info-row">
-                                <span>Puestos de Salud:</span>
-                                <strong id="salud-puestos-salud">0</strong>
-                            </div>
-                            <div class="info-row">
-                                <span>Clínicas/IPS:</span>
-                                <strong id="salud-clinicas-ips">0</strong>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="info-card">
-                        <h3>Educación</h3>
-                        <div class="info-list">
-                            <div class="info-row">
-                                <span>Centros Educativos:</span>
-                                <strong id="educacion-centros-principales">0</strong>
-                            </div>
-                            <div class="info-row">
-                                <span>Sedes Urbanas:</span>
-                                <strong id="educacion-sedes-urbanas">0</strong>
-                            </div>
-                            <div class="info-row">
-                                <span>Sedes Rurales:</span>
-                                <strong id="educacion-sedes-rurales">0</strong>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section: Edificaciones Públicas -->
-            <section class="section">
-                <h2>Edificaciones Públicas</h2>
-                <div class="cards-grid-2">
-                    <div class="info-card">
-                        <div class="info-list">
-                            <div class="info-row">
-                                <span>Centros Comunitarios:</span>
-                                <strong id="edificaciones-centros-comunitarios">0</strong>
-                            </div>
-                            <div class="info-row">
-                                <span>Alcaldía:</span>
-                                <strong id="edificaciones-alcaldia">0</strong>
-                            </div>
-                            <div class="info-row">
-                                <span>Iglesias:</span>
-                                <strong id="edificaciones-iglesias">0</strong>
-                            </div>
-                            <div class="info-row">
-                                <span>Plaza de Mercado:</span>
-                                <strong id="edificaciones-plaza-mercado">0</strong>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="info-card">
-                        <div class="info-list">
-                            <div class="info-row">
-                                <span>Cultura:</span>
-                                <strong id="edificaciones-cultura">0</strong>
-                            </div>
-                            <div class="info-row">
-                                <span>Casetas JAC:</span>
-                                <strong id="edificaciones-jac">--</strong>
-                            </div>
-                            <div class="info-row">
-                                <span>Otras:</span>
-                                <strong id="edificaciones-otras">0</strong>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section: Vías y Locales -->
-            <section class="section">
-                <h2>Vías e Comercio</h2>
-                <div class="cards-grid-2">
-                    <div class="info-card">
-                        <h3>Vías Afectadas</h3>
-                        <div class="info-list">
-                            <div class="info-row">
-                                <span>Principales Urbanas:</span>
-                                <strong id="vias-principales-urbanas">0</strong>
-                            </div>
-                            <div class="info-row">
-                                <span>Secundarias/Terciarias Rurales:</span>
-                                <strong id="vias-secundarias-terciarias-rurales">0</strong>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="info-card">
-                        <h3>Locales</h3>
-                        <div class="info-list">
-                            <div class="info-row">
-                                <span>Averiados:</span>
-                                <strong id="locales-averiados">0</strong>
-                            </div>
-                            <div class="info-row">
-                                <span>Destruidos:</span>
-                                <strong id="locales-destruidos">0</strong>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section: Albergues -->
-            <section class="section">
-                <h2>Albergues</h2>
-                <div class="info-card large">
-                    <div class="info-list">
-                        <div class="info-row">
-                            <span>Ubicación:</span>
-                            <strong id="albergues-ubicacion">--</strong>
-                        </div>
-                        <div class="info-row">
-                            <span>Albergues Activos:</span>
-                            <strong id="albergues-activos">0</strong>
-                        </div>
-                        <div class="info-row">
-                            <span>Personas Albergadas:</span>
-                            <strong id="albergues-personas">0</strong>
-                        </div>
-                        <div class="info-row">
-                            <span>Necesidades:</span>
-                            <strong id="albergues-necesidades">--</strong>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section: Servicios y Atención -->
-            <section class="section">
-                <h2>Servicios y Atención Humanitaria</h2>
-                <div class="cards-grid-2">
-                    <div class="info-card">
-                        <h3>Estado de Servicios</h3>
-                        <div class="status-box" id="servicios">--</div>
-                    </div>
-                    <div class="info-card">
-                        <h3>Asistencia Humanitaria</h3>
-                        <div class="info-list">
-                            <div class="info-row">
-                                <span>Asistencia General:</span>
-                                <strong id="atencion-asistencia-humanitaria">--</strong>
-                            </div>
-                            <div class="info-row">
-                                <span>Colchones/Frazadas:</span>
-                                <strong id="atencion-colchones-frazadas">--</strong>
-                            </div>
-                            <div class="info-row">
-                                <span>Maquinaria Amarilla:</span>
-                                <strong id="atencion-maquinaria-amarilla">0</strong>
-                            </div>
-                            <div class="info-row">
-                                <span>Materiales de Construcción:</span>
-                                <strong id="atencion-material-construccion">--</strong>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Section: Gestión y Requerimientos -->
-            <section class="section">
-                <h2>Gestión y Requerimientos</h2>
-                <div class="cards-grid-2">
-                    <div class="info-card">
-                        <h3>Gestión</h3>
-                        <div class="info-list">
-                            <div class="info-row">
-                                <span>PMU:</span>
-                                <span class="status-badge" id="gestion-pmu">--</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="info-card">
-                        <h3>Requerimientos</h3>
-                        <p class="requirements-text" id="requerimientos">--</p>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Footer Info -->
-            <section class="section footer-section">
-                <p class="footer-text"><strong>Fuente:</strong> <span id="fuente">--</span></p>
-            </section>
         </main>
-
-        <!-- Footer -->
-        <footer class="footer">
-            <p>&copy; 2026 Andalucía Responde. Reporte Consolidado de Desastres.</p>
-        </footer>
     </div>
 
     <script src="script.js"></script>
