@@ -19,9 +19,11 @@
                 <ul>
                     <li><a href="#poblacion"><i class="fas fa-users"></i> Población</a></li>
                     <li><a href="#viviendas"><i class="fas fa-home"></i> Viviendas</a></li>
+                    <li><a href="#rufe"><i class="fas fa-file-alt"></i> RUFE</a></li>
+                    <li><a href="#emergencias"><i class="fas fa-exclamation-triangle"></i> Emergencias</a></li>
                     <li><a href="#infraestructura"><i class="fas fa-building"></i> Infraestructura</a></li>
                     <li><a href="#servicios"><i class="fas fa-heartbeat"></i> Servicios</a></li>
-                    <li><a href="#requerimientos"><i class="fas fa-list-check"></i> Requerimientos</a></li>
+                    <li><a href="#psicosocial"><i class="fas fa-brain"></i> Psicosocial</a></li>
                 </ul>
             </nav>
             <div class="sidebar-footer">
@@ -59,7 +61,7 @@
                         <div class="card card-blue">
                             <div class="card-icon"><i class="fas fa-person"></i></div>
                             <div class="card-content">
-                                <h3>Población Afectada</h3>
+                                <h3>Personas Registradas</h3>
                                 <p class="card-value" id="poblacion-afectada">0</p>
                                 <p class="card-unit">personas</p>
                             </div>
@@ -98,29 +100,87 @@
                         <div class="card card-blue">
                             <div class="card-icon"><i class="fas fa-building"></i></div>
                             <div class="card-content">
-                                <h3>Urbanas Averiadas</h3>
+                                <h3>Techos y Muros</h3>
                                 <p class="card-value" id="viviendas-urbanas-averiadas">0</p>
+                                <p class="card-unit">casas</p>
                             </div>
                         </div>
                         <div class="card card-red">
                             <div class="card-icon"><i class="fas fa-house-damage"></i></div>
                             <div class="card-content">
-                                <h3>Urbanas Destruidas</h3>
+                                <h3>No Habitables</h3>
                                 <p class="card-value" id="viviendas-urbanas-destruidas">0</p>
+                                <p class="card-unit">viviendas</p>
                             </div>
                         </div>
                         <div class="card card-orange">
-                            <div class="card-icon"><i class="fas fa-tree"></i></div>
+                            <div class="card-icon"><i class="fas fa-toolbox"></i></div>
                             <div class="card-content">
-                                <h3>Rurales Averiadas</h3>
+                                <h3>Averiaciones Menores</h3>
                                 <p class="card-value" id="viviendas-rurales-averiadas">0</p>
+                                <p class="card-unit">viviendas</p>
                             </div>
                         </div>
                         <div class="card card-yellow">
-                            <div class="card-icon"><i class="fas fa-person-hiking"></i></div>
+                            <div class="card-icon"><i class="fas fa-wrench"></i></div>
                             <div class="card-content">
-                                <h3>Rurales Destruidas</h3>
+                                <h3>Destruidas</h3>
                                 <p class="card-value" id="viviendas-rurales-destruidas">0</p>
+                                <p class="card-unit">viviendas</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: RUFE -->
+                <section id="rufe" class="section">
+                    <h2><i class="fas fa-file-alt"></i> RUFE - Registro Unifamiliar de Emergencias</h2>
+                    <div class="cards-grid">
+                        <div class="card card-blue">
+                            <div class="card-icon"><i class="fas fa-clipboard-list"></i></div>
+                            <div class="card-content">
+                                <h3>RUFE Realizados</h3>
+                                <p class="card-value" id="rufe-realizados">0</p>
+                                <p class="card-unit">registros</p>
+                            </div>
+                        </div>
+                        <div class="card card-orange">
+                            <div class="card-icon"><i class="fas fa-users-check"></i></div>
+                            <div class="card-content">
+                                <h3>Personas Registradas</h3>
+                                <p class="card-value" id="rufe-personas">0</p>
+                                <p class="card-unit">personas</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: Emergencias -->
+                <section id="emergencias" class="section">
+                    <h2><i class="fas fa-exclamation-triangle"></i> Escombros y Emergencias</h2>
+                    <div class="cards-grid">
+                        <div class="card card-red">
+                            <div class="card-icon"><i class="fas fa-dumpster"></i></div>
+                            <div class="card-content">
+                                <h3>Escombros Dispuestos</h3>
+                                <p class="card-value" id="escombros-toneladas">0</p>
+                                <p class="card-unit">toneladas</p>
+                            </div>
+                        </div>
+                        <div class="card card-yellow">
+                            <div class="card-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div class="card-content">
+                                <h3>Sitios Aislados</h3>
+                                <p class="card-value" id="sitios-aislados">0</p>
+                                <p class="card-unit">sitios</p>
+                            </div>
+                        </div>
+                        <div class="card card-orange">
+                            <div class="card-icon"><i class="fas fa-shopping-basket"></i></div>
+                            <div class="card-content">
+                                <h3>Mercados Entregados</h3>
+                                <p class="card-value" id="mercados-entregados">0</p>
+                                <p class="card-unit">mercados</p>
                             </div>
                         </div>
                     </div>
@@ -128,73 +188,70 @@
 
                 <!-- Section: Infraestructura -->
                 <section id="infraestructura" class="section">
-                    <h2><i class="fas fa-building"></i> Infraestructura</h2>
+                    <h2><i class="fas fa-building"></i> Infraestructura Afectada</h2>
                     <div class="info-grid">
-                        <div class="info-box">
-                            <h3><i class="fas fa-hospital"></i> Salud</h3>
-                            <div class="info-list">
-                                <div class="info-row">
-                                    <span>Hospitales:</span>
-                                    <strong id="salud-hospitales">0</strong>
-                                </div>
-                                <div class="info-row">
-                                    <span>Centros de Salud:</span>
-                                    <strong id="salud-centros-salud">0</strong>
-                                </div>
-                                <div class="info-row">
-                                    <span>Puestos de Salud:</span>
-                                    <strong id="salud-puestos-salud">0</strong>
-                                </div>
-                                <div class="info-row">
-                                    <span>Clínicas/IPS:</span>
-                                    <strong id="salud-clinicas-ips">0</strong>
-                                </div>
-                            </div>
-                        </div>
                         <div class="info-box">
                             <h3><i class="fas fa-book"></i> Educación</h3>
                             <div class="info-list">
                                 <div class="info-row">
-                                    <span>Centros Educativos:</span>
+                                    <span>Sedes Educativas Averiadas:</span>
                                     <strong id="educacion-centros-principales">0</strong>
                                 </div>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <h3><i class="fas fa-hospital"></i> Salud</h3>
+                            <div class="info-list">
                                 <div class="info-row">
-                                    <span>Sedes Urbanas:</span>
-                                    <strong id="educacion-sedes-urbanas">0</strong>
-                                </div>
-                                <div class="info-row">
-                                    <span>Sedes Rurales:</span>
-                                    <strong id="educacion-sedes-rurales">0</strong>
+                                    <span>Hospital (Averiaciones Leves):</span>
+                                    <strong id="salud-hospitales">0</strong>
                                 </div>
                             </div>
                         </div>
                         <div class="info-box">
-                            <h3><i class="fas fa-gopuram"></i> Edificaciones</h3>
+                            <h3><i class="fas fa-gopuram"></i> Religiosas</h3>
                             <div class="info-list">
                                 <div class="info-row">
-                                    <span>Comunitarios:</span>
-                                    <strong id="edificaciones-centros-comunitarios">0</strong>
+                                    <span>Iglesia San Vicente (Muy Averiada):</span>
+                                    <strong id="iglesia-principal">0</strong>
                                 </div>
                                 <div class="info-row">
-                                    <span>Iglesias:</span>
-                                    <strong id="edificaciones-iglesias">0</strong>
+                                    <span>Otras Iglesias Averiadas:</span>
+                                    <strong id="iglesias-otras">0</strong>
                                 </div>
                                 <div class="info-row">
-                                    <span>Plaza de Mercado:</span>
-                                    <strong id="edificaciones-plaza-mercado">0</strong>
+                                    <span>Cementerio Central:</span>
+                                    <strong id="cementerio">0</strong>
                                 </div>
                             </div>
                         </div>
                         <div class="info-box">
-                            <h3><i class="fas fa-road"></i> Vías</h3>
+                            <h3><i class="fas fa-city"></i> Municipal</h3>
                             <div class="info-list">
                                 <div class="info-row">
-                                    <span>Principales Urbanas:</span>
-                                    <strong id="vias-principales-urbanas">0</strong>
+                                    <span>Edificio Municipal:</span>
+                                    <strong id="municipio">0</strong>
                                 </div>
                                 <div class="info-row">
-                                    <span>Secundarias Rurales:</span>
-                                    <strong id="vias-secundarias-terciarias-rurales">0</strong>
+                                    <span>Comisaría:</span>
+                                    <strong id="comisaria">0</strong>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="info-box">
+                            <h3><i class="fas fa-hotel"></i> Otros Edificios</h3>
+                            <div class="info-list">
+                                <div class="info-row">
+                                    <span>Hotel Andaluz (Muy Averiado):</span>
+                                    <strong id="hotel">0</strong>
+                                </div>
+                                <div class="info-row">
+                                    <span>Centro Vida:</span>
+                                    <strong id="centro-vida">0</strong>
+                                </div>
+                                <div class="info-row">
+                                    <span>Polideportivo:</span>
+                                    <strong id="polideportivo">0</strong>
                                 </div>
                             </div>
                         </div>
@@ -259,12 +316,43 @@
                     </div>
                 </section>
 
-                <!-- Section: Requerimientos -->
-                <section id="requerimientos" class="section">
+                <!-- Section: Atención Psicosocial -->
+                <section id="psicosocial" class="section">
+                    <h2><i class="fas fa-brain"></i> Atención Psicosocial</h2>
+                    <div class="cards-grid">
+                        <div class="card card-blue">
+                            <div class="card-icon"><i class="fas fa-user-nurse"></i></div>
+                            <div class="card-content">
+                                <h3>Equipos Creados</h3>
+                                <p class="card-value" id="psico-equipos">0</p>
+                                <p class="card-unit">equipos</p>
+                            </div>
+                        </div>
+                        <div class="card card-orange">
+                            <div class="card-icon"><i class="fas fa-person-circle-plus"></i></div>
+                            <div class="card-content">
+                                <h3>Atención Individual</h3>
+                                <p class="card-value" id="psico-individual">0</p>
+                                <p class="card-unit">personas</p>
+                            </div>
+                        </div>
+                        <div class="card card-yellow">
+                            <div class="card-icon"><i class="fas fa-people-group"></i></div>
+                            <div class="card-content">
+                                <h3>Atención Grupal</h3>
+                                <p class="card-value" id="psico-grupal">0</p>
+                                <p class="card-unit">sesiones</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Section: Gestión y Requerimientos -->
+                <section class="section">
                     <h2><i class="fas fa-list-check"></i> Gestión y Requerimientos</h2>
                     <div class="info-grid">
                         <div class="info-box full">
-                            <h3><i class="fas fa-cogs"></i> Estado</h3>
+                            <h3><i class="fas fa-cogs"></i> Estado de Gestión</h3>
                             <div class="info-list">
                                 <div class="info-row">
                                     <span>PMU:</span>
@@ -273,7 +361,7 @@
                             </div>
                         </div>
                         <div class="info-box full">
-                            <h3><i class="fas fa-exclamation-circle"></i> Requerimientos</h3>
+                            <h3><i class="fas fa-exclamation-circle"></i> Requerimientos Prioritarios</h3>
                             <p class="requirements-text" id="requerimientos">--</p>
                         </div>
                     </div>
