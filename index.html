@@ -1,1 +1,295 @@
-<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#0b2d52"><title>Andalucía Responde · Reporte oficial</title><link rel="stylesheet" href="styles.css"></head><body><header class="top"><div class="brand"><div class="seal">A</div><div><div class="micro">MUNICIPIO DE ANDALUCÍA · VALLE DEL CAUCA</div><strong>CONSEJO MUNICIPAL DE GESTIÓN DEL RIESGO DE DESASTRES – CMGRD</strong></div></div><div class="status"><i></i> REPORTE OFICIAL</div></header><main><section class="hero"><div><div class="micro blue">CENTRO DIGITAL DE SEGUIMIENTO</div><h1>ANDALUCÍA <span>RESPONDE</span></h1><p>Actualización consolidada de afectaciones y requerimientos por sismo</p></div><div class="cut"><small>CORTE DEL REPORTE</small><b id="corte"></b><small id="declaratoria"></small></div></section><section class="kpis"><article class="kpi primary"><small>POBLACIÓN AFECTADA</small><b id="afectada"></b><span>personas reportadas</span></article><article class="kpi"><small>VIVIENDAS AFECTADAS</small><b id="viviendas"></b><span>averiadas + destruidas</span></article><article class="kpi"><small>LOCALES COMERCIALES</small><b id="locales"></b><span>afectados</span></article><article class="kpi"><small>FALLECIDOS</small><b>0</b><span>reporte oficial</span></article></section><section class="section"><div class="bar"><em>01</em><h2>POBLACIÓN Y VIVIENDA</h2></div><div class="grid three"><article class="card focus"><h3>IMPACTO HUMANO</h3><div class="huge" id="afectada2"></div><p>Personas afectadas</p><div class="minirow"><b>0</b><span>Fallecidos</span><b>0</b><span>Desaparecidos</span><b>0</b><span>Heridos</span></div></article><article class="card"><h3>VIVIENDA URBANA</h3><div class="big blue" id="urbA"></div><p>Averiadas</p><div class="tag red">12 destruidas</div></article><article class="card"><h3>VIVIENDA RURAL</h3><div class="big green" id="rurA"></div><p>Averiadas</p><div class="tag red">6 destruidas</div></article></div></section><section class="section"><div class="bar cyan"><em>02</em><h2>SALUD, EDUCACIÓN Y EDIFICACIONES PÚBLICAS</h2></div><div class="grid four"><article class="card"><h3>SALUD</h3><div class="metricline"><b>1</b><span>Hospital afectado</span></div><div class="muted">Centros de salud: 0 · Puestos: 0 · Clínicas/IPS: 0</div></article><article class="card"><h3>EDUCACIÓN</h3><div class="metricline"><b>2</b><span>Centros educativos principales</span></div><div class="muted">5 sedes urbanas · 5 sedes rurales</div></article><article class="card"><h3>EDIFICACIONES</h3><div class="metricline"><b>1</b><span>Alcaldía afectada</span></div><div class="muted">1 iglesia · 1 plaza de mercado · 4 centros comunitarios</div></article><article class="card"><h3>ESTRUCTURAS</h3><div class="metricline"><b>1</b><span>Edificación &gt;3 pisos con daño estructural</span></div><div class="muted">Colapsadas: 0</div></article></div><div class="note"><b>JAC / CASETAS COMUNALES:</b> 13 casetas comunales afectadas.</div></section><section class="section"><div class="bar dark"><em>03</em><h2>VÍAS, COMERCIO Y SERVICIOS ESENCIALES</h2></div><div class="grid four"><article class="card"><h3>VÍAS</h3><div class="metricline"><b>1</b><span>Vía secundaria/terciaria rural reportada</span></div><div class="muted">Vías principales urbanas: no reportadas</div></article><article class="card"><h3>COMERCIO</h3><div class="metricline"><b>35</b><span>Locales averiados</span></div><div class="tag red">1 destruido</div></article><article class="card"><h3>SERVICIOS ESENCIALES</h3><div class="ok">GARANTIZADOS<br>Y FUNCIONANDO</div><div class="muted">Agua · energía · gas</div></article><article class="card"><h3>GESTIÓN DE EMERGENCIA</h3><div class="ok">PMU ACTIVADO</div><div class="muted">Seguimiento institucional permanente</div></article></div></section><section class="section"><div class="bar orange"><em>04</em><h2>ALBERGUES Y ATENCIÓN HUMANITARIA</h2></div><div class="grid three"><article class="card"><h3>ALBERGUES TEMPORALES</h3><div class="big">0</div><p>activos reportados</p><div class="muted">Ubicación: no reportada · Personas: 0</div></article><article class="card"><h3>PERSONAL PROFESIONAL</h3><div class="ok neutral">REQUERIDO</div><p>Ingeniero civil y estructural + arquitecto.</p></article><article class="card"><h3>MATERIALES PRIORITARIOS</h3><p class="compact">Varilla, tejas de zinc, cemento, ladrillo, listones, cuartones, puntillas, sellador y anclaje epóxico.</p></article></div></section><section class="section"><div class="bar red"><em>05</em><h2>REQUERIMIENTOS Y NECESIDADES PRIORITARIAS</h2></div><div class="requirements"><div><b>01</b><strong>Materiales de construcción</strong><p>Varilla, tejas de zinc, cemento, ladrillo, listones, cuartones, puntillas, sellador y anclaje epóxico.</p></div><div><b>02</b><strong>Ayuda humanitaria</strong><p>Kits de aseo, colchonetas, frazadas y kits de ayuda humanitaria.</p></div><div><b>03</b><strong>Personal técnico</strong><p>Ingeniero estructural, ingeniero civil y arquitecto.</p></div><div><b>04</b><strong>Carpas para albergues</strong><p>Requerimiento registrado: Sí.</p></div></div></section><section class="trace"><strong>TRAZABILIDAD DEL REPORTE</strong><p><b>Fuente:</b> REPORTE CONSOLIDADO ANDALUCIA J.xlsx · <b>Declaratoria:</b> Decreto 086 del 11/08/2026</p><p>“No reportado” no equivale a cero.</p></section></main><footer><b>ANDALUCÍA RESPONDE</b><span>Coordinado por el CMGRD · Municipio de Andalucía</span></footer><script>fetch('data.json').then(r=>r.json()).then(d=>{const f=n=>Number(n).toLocaleString('es-CO');document.getElementById('corte').textContent=d.corte;document.getElementById('declaratoria').textContent=d.declaratoria;document.getElementById('afectada').textContent=f(d.poblacion.afectada);document.getElementById('afectada2').textContent=f(d.poblacion.afectada);document.getElementById('viviendas').textContent=f(d.poblacion.viviendas_urbanas_averiadas+d.poblacion.viviendas_urbanas_destruidas+d.poblacion.viviendas_rurales_averiadas+d.poblacion.viviendas_rurales_destruidas);document.getElementById('locales').textContent=f(d.locales.averiados+d.locales.destruidos);document.getElementById('urbA').textContent=f(d.poblacion.viviendas_urbanas_averiadas);document.getElementById('rurA').textContent=f(d.poblacion.viviendas_rurales_averiadas)});</script></body></html>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andalucía Responde 2026</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-content">
+                <div>
+                    <h1>🚨 Andalucía Responde</h1>
+                    <p class="subtitle">Reporte Consolidado de Desastres - 2026</p>
+                </div>
+                <div class="header-info">
+                    <div class="info-item">
+                        <span class="label">Corte:</span>
+                        <span class="value" id="corte">--</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Decreto:</span>
+                        <span class="value" id="declaratoria">--</span>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main>
+            <!-- Section: Población Afectada -->
+            <section class="section">
+                <h2>Población Afectada</h2>
+                <div class="cards-grid">
+                    <div class="card card-blue">
+                        <h3>Población Afectada</h3>
+                        <p class="card-value" id="poblacion-afectada">0</p>
+                        <p class="card-label">personas</p>
+                    </div>
+                    <div class="card card-red">
+                        <h3>Fallecidos</h3>
+                        <p class="card-value" id="poblacion-fallecidos">0</p>
+                        <p class="card-label">personas</p>
+                    </div>
+                    <div class="card card-orange">
+                        <h3>Desaparecidos</h3>
+                        <p class="card-value" id="poblacion-desaparecidos">0</p>
+                        <p class="card-label">personas</p>
+                    </div>
+                    <div class="card card-yellow">
+                        <h3>Heridos</h3>
+                        <p class="card-value" id="poblacion-heridos">0</p>
+                        <p class="card-label">personas</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Viviendas -->
+            <section class="section">
+                <h2>Viviendas Afectadas</h2>
+                <div class="cards-grid">
+                    <div class="card card-blue">
+                        <h3>Urbanas Averiadas</h3>
+                        <p class="card-value" id="viviendas-urbanas-averiadas">0</p>
+                    </div>
+                    <div class="card card-red">
+                        <h3>Urbanas Destruidas</h3>
+                        <p class="card-value" id="viviendas-urbanas-destruidas">0</p>
+                    </div>
+                    <div class="card card-orange">
+                        <h3>Rurales Averiadas</h3>
+                        <p class="card-value" id="viviendas-rurales-averiadas">0</p>
+                    </div>
+                    <div class="card card-yellow">
+                        <h3>Rurales Destruidas</h3>
+                        <p class="card-value" id="viviendas-rurales-destruidas">0</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Infraestructura -->
+            <section class="section">
+                <h2>Infraestructura</h2>
+                <div class="cards-grid-2">
+                    <div class="info-card">
+                        <h3>Salud</h3>
+                        <div class="info-list">
+                            <div class="info-row">
+                                <span>Hospitales:</span>
+                                <strong id="salud-hospitales">0</strong>
+                            </div>
+                            <div class="info-row">
+                                <span>Centros de Salud:</span>
+                                <strong id="salud-centros-salud">0</strong>
+                            </div>
+                            <div class="info-row">
+                                <span>Puestos de Salud:</span>
+                                <strong id="salud-puestos-salud">0</strong>
+                            </div>
+                            <div class="info-row">
+                                <span>Clínicas/IPS:</span>
+                                <strong id="salud-clinicas-ips">0</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <h3>Educación</h3>
+                        <div class="info-list">
+                            <div class="info-row">
+                                <span>Centros Educativos:</span>
+                                <strong id="educacion-centros-principales">0</strong>
+                            </div>
+                            <div class="info-row">
+                                <span>Sedes Urbanas:</span>
+                                <strong id="educacion-sedes-urbanas">0</strong>
+                            </div>
+                            <div class="info-row">
+                                <span>Sedes Rurales:</span>
+                                <strong id="educacion-sedes-rurales">0</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Edificaciones Públicas -->
+            <section class="section">
+                <h2>Edificaciones Públicas</h2>
+                <div class="cards-grid-2">
+                    <div class="info-card">
+                        <div class="info-list">
+                            <div class="info-row">
+                                <span>Centros Comunitarios:</span>
+                                <strong id="edificaciones-centros-comunitarios">0</strong>
+                            </div>
+                            <div class="info-row">
+                                <span>Alcaldía:</span>
+                                <strong id="edificaciones-alcaldia">0</strong>
+                            </div>
+                            <div class="info-row">
+                                <span>Iglesias:</span>
+                                <strong id="edificaciones-iglesias">0</strong>
+                            </div>
+                            <div class="info-row">
+                                <span>Plaza de Mercado:</span>
+                                <strong id="edificaciones-plaza-mercado">0</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="info-list">
+                            <div class="info-row">
+                                <span>Cultura:</span>
+                                <strong id="edificaciones-cultura">0</strong>
+                            </div>
+                            <div class="info-row">
+                                <span>Casetas JAC:</span>
+                                <strong id="edificaciones-jac">--</strong>
+                            </div>
+                            <div class="info-row">
+                                <span>Otras:</span>
+                                <strong id="edificaciones-otras">0</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Vías y Locales -->
+            <section class="section">
+                <h2>Vías e Comercio</h2>
+                <div class="cards-grid-2">
+                    <div class="info-card">
+                        <h3>Vías Afectadas</h3>
+                        <div class="info-list">
+                            <div class="info-row">
+                                <span>Principales Urbanas:</span>
+                                <strong id="vias-principales-urbanas">0</strong>
+                            </div>
+                            <div class="info-row">
+                                <span>Secundarias/Terciarias Rurales:</span>
+                                <strong id="vias-secundarias-terciarias-rurales">0</strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <h3>Locales</h3>
+                        <div class="info-list">
+                            <div class="info-row">
+                                <span>Averiados:</span>
+                                <strong id="locales-averiados">0</strong>
+                            </div>
+                            <div class="info-row">
+                                <span>Destruidos:</span>
+                                <strong id="locales-destruidos">0</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Albergues -->
+            <section class="section">
+                <h2>Albergues</h2>
+                <div class="info-card large">
+                    <div class="info-list">
+                        <div class="info-row">
+                            <span>Ubicación:</span>
+                            <strong id="albergues-ubicacion">--</strong>
+                        </div>
+                        <div class="info-row">
+                            <span>Albergues Activos:</span>
+                            <strong id="albergues-activos">0</strong>
+                        </div>
+                        <div class="info-row">
+                            <span>Personas Albergadas:</span>
+                            <strong id="albergues-personas">0</strong>
+                        </div>
+                        <div class="info-row">
+                            <span>Necesidades:</span>
+                            <strong id="albergues-necesidades">--</strong>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Servicios y Atención -->
+            <section class="section">
+                <h2>Servicios y Atención Humanitaria</h2>
+                <div class="cards-grid-2">
+                    <div class="info-card">
+                        <h3>Estado de Servicios</h3>
+                        <div class="status-box" id="servicios">--</div>
+                    </div>
+                    <div class="info-card">
+                        <h3>Asistencia Humanitaria</h3>
+                        <div class="info-list">
+                            <div class="info-row">
+                                <span>Asistencia General:</span>
+                                <strong id="atencion-asistencia-humanitaria">--</strong>
+                            </div>
+                            <div class="info-row">
+                                <span>Colchones/Frazadas:</span>
+                                <strong id="atencion-colchones-frazadas">--</strong>
+                            </div>
+                            <div class="info-row">
+                                <span>Maquinaria Amarilla:</span>
+                                <strong id="atencion-maquinaria-amarilla">0</strong>
+                            </div>
+                            <div class="info-row">
+                                <span>Materiales de Construcción:</span>
+                                <strong id="atencion-material-construccion">--</strong>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Section: Gestión y Requerimientos -->
+            <section class="section">
+                <h2>Gestión y Requerimientos</h2>
+                <div class="cards-grid-2">
+                    <div class="info-card">
+                        <h3>Gestión</h3>
+                        <div class="info-list">
+                            <div class="info-row">
+                                <span>PMU:</span>
+                                <span class="status-badge" id="gestion-pmu">--</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <h3>Requerimientos</h3>
+                        <p class="requirements-text" id="requerimientos">--</p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Footer Info -->
+            <section class="section footer-section">
+                <p class="footer-text"><strong>Fuente:</strong> <span id="fuente">--</span></p>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2026 Andalucía Responde. Reporte Consolidado de Desastres.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
