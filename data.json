@@ -1,7 +1,16 @@
 {
   "corte":"19 de agosto de 2026",
   "declaratoria":"Decreto 086 del 11/08/2026",
-  "poblacion":{"afectada":1900,"viviendas_urbanas_averiadas":528,"viviendas_urbanas_destruidas":12,"viviendas_rurales_averiadas":295,"viviendas_rurales_destruidas":6},
+  "fuente":"REPORTE CONSOLIDADO ANDALUCIA J.xlsx",
+  "poblacion":{"afectada":1900,"fallecidos":0,"desaparecidos":0,"heridos":0,"viviendas_urbanas_averiadas":528,"viviendas_urbanas_destruidas":12,"viviendas_rurales_averiadas":295,"viviendas_rurales_destruidas":6,"edificios_mas_3_pisos_dano_estructural":1,"edificios_mas_3_pisos_colapsados":0},
+  "salud":{"hospitales":1,"centros_salud":0,"puestos_salud":0,"clinicas_ips":0},
+  "educacion":{"centros_educativos_principales":2,"sedes_urbanas":5,"sedes_rurales":5},
+  "edificaciones_publicas":{"centros_comunitarios":4,"alcaldia":1,"iglesias":1,"plaza_mercado":1,"cultura":0,"jac":"13 casetas comunales afectadas","otras":1},
+  "vias":{"principales_urbanas":0,"secundarias_terciarias_rurales":1},
   "locales":{"averiados":35,"destruidos":1},
-  "fuente":"REPORTE CONSOLIDADO ANDALUCIA J.xlsx"
+  "servicios":"Garantizados y funcionando",
+  "albergues":{"ubicacion":"No reportado","activos":0,"personas":0,"necesidades":"No reportado"},
+  "atencion":{"asistencia_humanitaria":"No cuantificada","colchones_frazadas":"No cuantificado","maquinaria_amarilla":0,"material_construccion":"Varilla, tejas de zinc, cemento, ladrillo, listones, cuartones, puntillas, sellador y anclaje epóxico","carro_tanques":0,"personal_profesional":"Ingeniero civil y estructural; arquitecto","carpas":"Sí","plantas_electricas":0,"atencion_medica":"No reportado"},
+  "gestion":{"pmu":"Activado"},
+  "requerimientos":"Ingeniero estructural, materiales de construcción, kits de aseo, colchonetas y frazadas, kits de ayuda humanitaria"
 }
